@@ -630,3 +630,51 @@ img{display:block;max-width:100%}
   .project-women{background-position:50% 31%}
   .hero-motion-toggle{right:16px;bottom:10px;padding:6px 11px;font-size:10px}
 }
+
+
+/* Dedicated interior pages — compact editorial masthead and clear hierarchy */
+.interior-banner{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:linear-gradient(115deg,#edf5e5 0%,#f9fbf5 65%,#d9ebcb 100%);
+  border-bottom:1px solid #dce8d6;
+}
+.interior-banner::before{
+  content:"";position:absolute;z-index:-1;right:-180px;top:-210px;
+  width:650px;height:650px;border-radius:50%;
+  background:radial-gradient(circle,#cce4ac90 0%,#e0efd270 42%,transparent 72%);
+}
+.interior-banner-inner{
+  position:relative;min-height:340px;padding-block:62px 72px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.interior-banner-left{position:relative;z-index:2;max-width:910px}
+.breadcrumb{
+  display:flex;align-items:center;gap:12px;margin-bottom:29px;
+  font:800 11px/1.5 var(--ui);letter-spacing:.02em;color:#51705b;
+}
+.breadcrumb a{color:#0f5133;text-decoration:underline;text-underline-offset:4px}
+.breadcrumb span[aria-current="page"]{color:#738b78}
+.interior-kicker{display:flex;align-items:center;gap:11px;margin:0 0 15px;color:#477c54;
+  font:800 10px/1.4 var(--ui);letter-spacing:.18em}
+.interior-dot{width:9px;height:9px;background:#80ba50;display:inline-block;flex:0 0 9px;border-radius:50%;box-shadow:0 0 0 5px #83c25922}
+.interior-banner h1{font:600 clamp(48px,5.5vw,82px)/1.08 var(--display);letter-spacing:-.058em;color:#073d2a;margin:0}
+.interior-subtitle{max-width:645px;margin:21px 0 0;color:#56705e;font-size:15px;line-height:1.8}
+.interior-banner-emblem{position:absolute;right:4%;bottom:-79px;font-size:310px;line-height:1;
+  transform:rotate(-14deg);color:#9dcf772c;pointer-events:none;user-select:none}
+.faq-standalone{padding-top:100px}
+.faq-standalone .faq-grid{padding-top:0;border-top:0}
+body[data-page="partners"] .nav-cta[aria-current="page"]{background:#4e8c4e}
+body[data-page="contact"] .contact-section{min-height:650px}
+body[data-page="impact"] .impact{min-height:580px}
+@media(max-width:760px){
+  .interior-banner-inner{min-height:250px;padding-top:42px;padding-bottom:45px}
+  .breadcrumb{margin-bottom:26px;font-size:10px}
+  .interior-kicker{font-size:9px;margin-bottom:15px}
+  .interior-banner h1{font-size:clamp(39px,9.3vw,57px)}
+  .interior-subtitle{font-size:13px;line-height:1.7;margin-top:16px;max-width:420px}
+  .interior-banner-emblem{font-size:170px;bottom:-42px;right:-18px}
+  .faq-standalone{padding-top:70px}
+  body[data-page="contact"] .contact-section{min-height:0}
+}

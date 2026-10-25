@@ -28,31 +28,44 @@
   updateHeader();
   window.addEventListener('scroll',updateHeader,{passive:true});
 
-  const sections=Array.from(document.querySelectorAll('main section[id]'));
-  function markCurrent(id){
-    navLinks.forEach(function(link){
-      const active=link.getAttribute('href')==='#'+id;
-      link.classList.toggle('active',active);
-      if(active)link.setAttribute('aria-current','location');
-      else link.removeAttribute('aria-current');
-    });
-  }
-  if('IntersectionObserver' in window){
-    const navObserver=new IntersectionObserver(function(entries){
-      const active=entries.filter(function(entry){return entry.isIntersecting}).sort(function(a,b){return b.intersectionRatio-a.intersectionRatio})[0];
-      if(active)markCurrent(active.target.id);
-    },{rootMargin:'-17% 0px -63% 0px',threshold:[0,.1,.3,.6]});
-    sections.forEach(function(section){navObserver.observe(section)});
-    const reveals=document.querySelectorAll('[data-reveal]');
-    if(reducedMotion){reveals.forEach(function(el){el.classList.add('is-visible')})}
-    else {
-      const revealObserver=new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)}});
-      },{rootMargin:'0px 0px -35px 0px',threshold:.06});
-      reveals.forEach(function(el){revealObserver.observe(el)});
+  // Page-level navigation: every section has its own document.
+  const currentPage=document.body.dataset.page||'home';
+  const pageFiles={home:'index.html',about:'about.html',services:'services.html',programmes:'programmes.html',projects:'projects.html',impact:'impact.html',partners:'partners.html',faq:'faq.html',contact:'contact.html'};
+  const currentFile=pageFiles[currentPage]||'index.html';
+  navLinks.forEach(function(link){
+    const active=link.getAttribute('href')===currentFile;
+    link.classList.toggle('active',active);
+    if(active)link.setAttribute('aria-current','page');
+    else link.removeAttribute('aria-current');
+  });
+  const partnerNavLink=document.querySelector('.nav-cta');
+  if(partnerNavLink&&currentPage==='partners')partnerNavLink.setAttribute('aria-current','page');
+
+  // Preserve previously shared one-page links by routing them to their new pages.
+  if(currentPage==='home'&&window.location.hash){
+    const target=decodeURIComponent(window.location.hash.substring(1));
+    if(pageFiles[target]&&target!=='home'){
+      window.location.replace(pageFiles[target]);
+      return;
     }
-  }else{document.querySelectorAll('[data-reveal]').forEach(function(el){el.classList.add('is-visible')})}
-  if(location.hash)markCurrent(location.hash.slice(1));
+    if(target==='mission'){window.location.replace('about.html#mission');return}
+  }
+
+  // Reveal visible elements without disrupting page navigation.
+  const reveals=document.querySelectorAll('[data-reveal]');
+  if(!('IntersectionObserver' in window)||reducedMotion){
+    reveals.forEach(function(el){el.classList.add('is-visible')});
+  }else{
+    const revealObserver=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },{rootMargin:'0px 0px -35px 0px',threshold:.06});
+    reveals.forEach(function(el){revealObserver.observe(el)});
+  }
 
   const chips=Array.from(document.querySelectorAll('[data-filter]'));
   const cards=Array.from(document.querySelectorAll('[data-category]'));

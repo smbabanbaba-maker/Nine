@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://nine-rouge-mu.vercel.app/</loc></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://nine-rouge-mu.vercel.app/</loc></url>
+  <url><loc>https://nine-rouge-mu.vercel.app/about.html</loc></url>
+  <url><loc>https://nine-rouge-mu.vercel.app/services.html</loc></url>
+  <url><loc>https://nine-rouge-mu.vercel.app/programmes.html</loc></url>
+  <url><loc>https://nine-rouge-mu.vercel.app/projects.html</loc></url>
+  <url><loc>https://nine-rouge-mu.vercel.app/impact.html</loc></url>
+  <url><loc>https://nine-rouge-mu.vercel.app/partners.html</loc></url>
+  <url><loc>https://nine-rouge-mu.vercel.app/faq.html</loc></url>
+  <url><loc>https://nine-rouge-mu.vercel.app/contact.html</loc></url>
+</urlset>

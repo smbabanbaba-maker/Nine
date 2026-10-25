@@ -52,3 +52,23 @@ README.md
 Semantic HTML5, responsive CSS, small vanilla JavaScript. No Node or framework build required. Includes responsive menu, interactive project filters, reveal effects, accessible focus states, reduced-motion handling, FAQ accordions, mobile layouts and search-engine metadata.
 
 Review at narrow mobile (320/360/390px), tablet (768px) and desktop widths before production launch.
+
+
+## Multi-page website navigation
+
+Each top-level destination is a separate fast-loading HTML page, not a long page of anchor sections:
+
+| Page | Location |
+|---|---|
+| Home | `index.html` |
+| About Us | `about.html` |
+| Services | `services.html` |
+| Programmes | `programmes.html` |
+| Projects | `projects.html` |
+| Impact | `impact.html` |
+| Partnerships | `partners.html` |
+| Frequently Asked Questions | `faq.html` |
+| Contact | `contact.html` |
+
+The shared navigation works on both desktop and mobile. Previous hash-based deep links on Home redirect to the corresponding new page. Home retains the hero image slideshow and values statement; the other pages only contain their own subject-specific content, plus shared navigation/footer.
+
