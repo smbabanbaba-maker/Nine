@@ -418,7 +418,7 @@ img{display:block;max-width:100%}
   position:absolute;
   inset:0;
   z-index:-2;
-  background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=2000&q=85');
+  background-image:url('natureworks-hero.webp');
   background-size:cover;
   background-position:center 41%;
   filter:saturate(.86) contrast(1.08);
