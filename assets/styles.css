@@ -968,3 +968,46 @@ body[data-page="impact"] .impact{min-height:580px}
   .home-collaborate-actions{gap:9px}
   .home-collaborate-actions .button{font-size:11px;padding:11px 16px}
 }
+
+
+/* Premium Home overview — immediately explain the company without a quick-start CTA panel. */
+.home-company-snapshot{background:#fff;padding:62px 0 65px;border-bottom:1px solid #e2e9dc}
+.snapshot-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:28px}
+.snapshot-eyebrow{font:800 10px/1.5 var(--ui);letter-spacing:.18em;color:#3c7e52;margin:0 0 10px}
+.snapshot-eyebrow>span{font-size:18px;vertical-align:middle;margin-right:6px}
+.snapshot-heading h2{font:600 clamp(29px,3vw,42px)/1.15 var(--display);letter-spacing:-.045em;color:#083d2a;margin:0}
+.snapshot-more{border-bottom:1px solid #2a6c46;padding-bottom:8px;font:800 12px var(--ui);color:#22633f;display:flex;align-items:center;gap:12px;white-space:nowrap}
+.snapshot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.snapshot-grid article{padding:23px 21px;border:1px solid #e2ecdb;background:#f5f9f1;border-radius:16px;min-height:195px;transition:transform .25s,box-shadow .25s}
+.snapshot-grid article:hover{transform:translateY(-3px);box-shadow:0 16px 32px #093b2616}
+.snapshot-icon{height:42px;width:42px;display:grid;place-items:center;border-radius:50%;background:#e2f0d7;color:#1a6c42;font-size:25px}
+.snapshot-grid h3{font:800 14px var(--ui);color:#17442c;margin:17px 0 8px}
+.snapshot-grid p{font-size:12px;line-height:1.7;color:#647869;margin:0}
+.home-services{padding-top:92px}
+.hero-photo .hero-intro strong{font-weight:800;color:#fff}
+@media(min-width:1001px){
+ .hero-photo .home-hero-shell{min-height:445px;padding-top:65px}
+ .hero-photo h1{font-size:clamp(50px,5vw,80px);max-width:900px}
+}
+@media(max-width:1000px) and (min-width:761px){
+ .snapshot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .snapshot-grid article{min-height:148px}
+}
+@media(max-width:760px){
+ .home-company-snapshot{padding:36px 0 42px}
+ .snapshot-heading{align-items:flex-start;margin-bottom:18px}
+ .snapshot-heading h2{font-size:29px}
+ .snapshot-more{font-size:10px;gap:4px}
+ .snapshot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .snapshot-grid article{min-height:165px;padding:15px 13px;border-radius:12px}
+ .snapshot-icon{height:33px;width:33px;font-size:20px}
+ .snapshot-grid h3{font-size:12px;margin:11px 0 6px}
+ .snapshot-grid p{font-size:10.5px;line-height:1.55}
+ .home-services{padding-top:60px}
+ .hero-photo h1{font-size:clamp(35px,8.5vw,48px)}
+ .hero-photo .hero-intro{font-size:12.5px;line-height:1.55}
+}
+@media(max-width:390px){
+ .snapshot-heading{flex-direction:column;gap:9px}
+ .snapshot-grid article{min-height:174px}
+}
