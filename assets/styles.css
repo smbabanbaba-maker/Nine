@@ -798,3 +798,173 @@ body[data-page="impact"] .impact{min-height:580px}
   .home-services .service-bottom p{min-height:0}
   .home-services .service-bottom h3{font-size:24px}
 }
+
+
+
+/* =========================================================
+   NATUREWORKS | HOMEPAGE EDITORIAL OVERVIEW
+   Concise previews on Home; in-depth content stays on individual pages.
+   ========================================================= */
+.home-intro{background:#fff}
+.home-intro-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(50px,7vw,115px);align-items:center}
+.home-intro-story>p:not(.section-label){color:#62776b;font-size:15px;line-height:1.85;margin:0 0 17px}
+.home-intro-story .section-lead{color:#244c39!important;font-size:19px!important;line-height:1.65!important}
+.home-intro-story .text-link{margin-top:12px}
+.home-intro-imagery{position:relative;min-height:520px;padding:0 20px 26px 28px}
+.home-intro-photo{position:absolute;inset:0 30px 23px 28px;border-radius:210px 210px 22px 22px;background:#e4eddf url("natureworks-slide-02.webp") center 46%/cover no-repeat;box-shadow:0 25px 75px rgba(4,52,26,.10)}
+.home-intro-image-label{position:absolute;bottom:3px;left:-12px;background:#bde18a;border:7px solid #fff;border-radius:13px;box-shadow:0 13px 25px rgba(18,72,37,.10);transform:rotate(-5deg);width:190px;padding:23px 20px;display:grid;grid-template-columns:1fr auto;gap:2px 10px;font:800 10px/1.5 var(--ui);letter-spacing:.16em;color:#12492e}
+.home-intro-image-label b{grid-column:2;grid-row:1/4;font-size:48px;align-self:center;line-height:1}
+.home-belief-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:94px;gap:14px}
+.home-belief-grid article{background:#f4f8f0;border:1px solid #e5ece1;border-radius:17px;padding:27px 29px 29px;min-height:201px;transition:transform .25s,background .25s}
+.home-belief-grid article:hover{background:#edf5e7;transform:translateY(-4px)}
+.home-belief-icon{display:inline-flex;align-items:center;justify-content:center;font-size:31px;color:#3b8051;height:40px}
+.home-belief-grid h3{font:600 23px/1.22 var(--display);letter-spacing:-.04em;margin:21px 0 8px;color:var(--forest)}
+.home-belief-grid p{font-size:13px;line-height:1.7;color:#708078;margin:0}
+
+.home-method{background:#fff}
+.home-method-top{display:flex;align-items:end;justify-content:space-between;gap:48px;margin-bottom:46px}
+.home-method-top .section-heading{margin:0}
+.home-method-top>p{max-width:390px;color:#6b7d70;font-size:14px;line-height:1.85;margin:0 0 7px}
+.home-method-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.home-method-steps article{position:relative;min-height:271px;padding:31px 29px 28px;border-radius:20px;background:#f3f7ed;overflow:hidden}
+.home-method-step{color:#638b6e;font:800 10px var(--ui);letter-spacing:.15em}
+.home-method-glyph{font-size:63px;line-height:1;color:#a6cc83;position:absolute;right:23px;top:18px;opacity:.65}
+.home-method-steps h3{font:600 27px/1.2 var(--display);color:var(--forest);letter-spacing:-.045em;max-width:260px;margin:72px 0 12px}
+.home-method-steps p{font-size:13px;line-height:1.8;color:#728176;max-width:340px;margin:0}
+
+.home-empower{background:#f5f8f1}
+.home-empower-layout{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(55px,7vw,95px);align-items:center}
+.home-empower-visual{position:relative;min-height:635px}
+.home-empower-photo{position:absolute;inset:0 20px 18px 0;border-radius:220px 220px 20px 20px;background:#e6e9e4 url("natureworks-slide-04.webp") center 28%/cover no-repeat;box-shadow:0 25px 58px rgba(8,48,29,.10)}
+.home-empower-photo-note{position:absolute;bottom:46px;right:-12px;background:var(--lime);color:var(--forest);border-radius:12px;padding:22px 26px;max-width:245px;transform:rotate(5deg);box-shadow:0 13px 30px rgba(4,44,29,.10)}
+.home-empower-photo-note span{display:block;font:800 9px var(--ui);letter-spacing:.18em;margin-bottom:8px}
+.home-empower-photo-note strong{display:block;font:600 20px/1.3 var(--display)}
+.home-empower-text>p:not(.section-label){font-size:14px;color:#6e7e73;line-height:1.85}
+.home-empower-text .section-lead{font-size:17px!important;color:#34543f!important;line-height:1.65!important}
+.home-empower-audiences{margin:30px 0 31px;border-top:1px solid #d9e5d7}
+.home-empower-audiences>div{padding:16px 0;display:flex;gap:17px;align-items:start;border-bottom:1px solid #d9e5d7}
+.home-audience-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#e0efd5;color:#215d3c;flex:0 0 38px;font:800 10px var(--ui)}
+.home-empower-audiences h3{margin:1px 0 5px;font:800 13px var(--ui);color:#174b30}
+.home-empower-audiences p{margin:0;font-size:12px;color:#728074;line-height:1.65}
+
+.home-focus{background:#fff}
+.home-focus .section-head{margin-bottom:41px}
+.home-focus-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.home-focus-card{background:#f4f7f1;border:1px solid #e7ece5;border-radius:20px;overflow:hidden;transition:transform .28s,box-shadow .28s}
+.home-focus-card:hover{transform:translateY(-6px);box-shadow:0 20px 43px rgba(5,54,31,.12)}
+.home-focus-image{height:240px;background-color:#e2ece3;background-position:center;background-size:cover}
+.home-focus-circular{background-image:url("natureworks-slide-03.webp");background-position:center 40%}
+.home-focus-inclusive{background-image:url("natureworks-slide-06.webp");background-position:center 46%}
+.home-focus-farming{background-image:url("natureworks-slide-05.webp");background-position:center 35%}
+.home-focus-content{padding:26px 25px 25px}
+.home-focus-content>span:first-child{font:800 9px var(--ui);letter-spacing:.13em;color:#5b8861}
+.home-focus-content h3{font:600 26px/1.22 var(--display);letter-spacing:-.043em;color:#143f29;margin:13px 0 12px}
+.home-focus-content p{font-size:13px;line-height:1.75;color:#718075;margin:0 0 23px;min-height:92px}
+.home-focus-content a{border-top:1px solid #dce6d8;display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:16px;color:#206139;font:800 12px var(--ui)}
+.home-focus-content a span{font-size:20px}
+.home-focus-after{display:flex;justify-content:center;margin-top:31px}
+
+.home-impact{position:relative;isolation:isolate;background:linear-gradient(115deg,#073624,#0c5336 65%,#0a402b);color:#fff;padding:108px 0;overflow:hidden}
+.home-impact::before{content:"✳";position:absolute;z-index:-1;right:-5%;top:-240px;font-size:640px;line-height:1;color:#c2e0860b;pointer-events:none}
+.home-impact-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,7vw,100px);align-items:center}
+.home-impact .section-heading{color:#fff;font-size:clamp(41px,4.1vw,65px)}
+.home-impact .section-heading em{color:#c3e36e}
+.home-impact-layout>div:first-child>p:not(.section-label){color:#c1d9c6;max-width:560px;font-size:14px;line-height:1.85;margin:0 0 28px}
+.home-impact-pillars{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.home-impact-pillars>div{min-height:163px;border:1px solid #ffffff2c;background:#ffffff0c;border-radius:17px;padding:23px 22px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.home-impact-pillars>div>span{font-size:31px;line-height:1;color:#c0e37f}
+.home-impact-pillars strong{font:700 15px/1.2 var(--ui);color:#fff}
+.home-impact-pillars small{font-size:11px;line-height:1.5;color:#b7d1c0}
+
+.home-collaborate{background:#f7faf5}
+.home-collaborate-layout{display:grid;grid-template-columns:1fr .9fr;gap:75px;align-items:center}
+.home-collaborate-layout>div:first-child>p:not(.section-label){max-width:510px;font-size:15px;line-height:1.85;color:#698173}
+.home-collaborate-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:31px}
+.home-collaborate-panel{position:relative;background:#104b31;color:#fff;border-radius:23px;min-height:345px;padding:41px 39px;display:flex;flex-direction:column;overflow:hidden}
+.home-collaborate-panel::after{position:absolute;content:"✳";font-size:260px;line-height:1;bottom:-95px;right:-60px;color:#bee4821b;pointer-events:none}
+.home-collaborate-top{font:800 10px var(--ui);letter-spacing:.17em;color:#c2e38c}
+.home-collaborate-panel h3{font:600 32px/1.2 var(--display);letter-spacing:-.04em;margin:32px 0 14px;max-width:350px}
+.home-collaborate-panel p{font-size:13px;line-height:1.85;color:#ccdfd0;max-width:370px}
+.home-collaborate-panel>div{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:30px}
+.home-collaborate-panel>div span{font:800 9px var(--ui);letter-spacing:.18em;color:#cae7bc}
+.home-collaborate-panel>div a{display:grid;place-items:center;width:43px;height:43px;border-radius:50%;background:var(--lime);color:var(--forest);font-size:22px}
+.home-collaborate-panel>div a:hover{background:#fff}
+
+.home-questions{background:#fff;padding:102px 0 125px}
+.home-questions-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px}
+.home-questions-layout .section-heading{margin-bottom:23px}
+.home-questions-layout .text-link{font-size:12px}
+.home-questions-list{border-top:1px solid #dce6db}
+.home-questions-list details{padding:20px 0;border-bottom:1px solid #dce6db}
+.home-questions-list summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:15px;font:800 14px/1.5 var(--ui);color:#19482f;list-style:none}
+.home-questions-list summary::-webkit-details-marker{display:none}
+.home-questions-list summary span{display:grid;place-items:center;flex:0 0 31px;width:31px;height:31px;border-radius:50%;background:#eaf3e5;color:#276e42;font-size:21px;transition:transform .2s}
+.home-questions-list details[open] summary span{transform:rotate(45deg)}
+.home-questions-list details p{max-width:590px;color:#6e7e73;font-size:13px;line-height:1.8;padding-right:22px;margin:14px 0 0}
+.home-questions-list details p a{text-decoration:underline;text-underline-offset:3px;color:#257b45;font-weight:800}
+
+@media(max-width:1000px){
+  .home-intro-layout,.home-empower-layout{gap:38px}
+  .home-intro-imagery{min-height:470px}
+  .home-empower-visual{min-height:520px}
+  .home-collaborate-layout{gap:40px}
+  .home-questions-layout{gap:43px}
+  .home-focus-content{padding:22px 19px}
+  .home-focus-content h3{font-size:23px}
+  .home-method-steps article{padding:27px 23px}
+}
+@media(max-width:760px){
+  .home-intro-layout{grid-template-columns:1fr;gap:28px}
+  .home-intro-story>p:not(.section-label){font-size:14px}
+  .home-intro-imagery{min-height:410px;max-width:520px;width:100%;margin-inline:auto}
+  .home-intro-photo{inset:0 25px 20px 18px}
+  .home-intro-image-label{left:-4px;bottom:0;padding:15px 15px;font-size:9px;width:165px}
+  .home-intro-image-label b{font-size:39px}
+  .home-belief-grid{grid-template-columns:1fr;gap:10px;margin-top:33px}
+  .home-belief-grid article{min-height:0;padding:23px}
+  .home-belief-grid h3{margin:9px 0;font-size:24px}
+  .home-belief-grid p{font-size:12px}
+  .home-method-top{display:block;margin-bottom:27px}
+  .home-method-top>p{font-size:13px;margin-top:15px}
+  .home-method-steps{grid-template-columns:1fr;gap:11px}
+  .home-method-steps article{min-height:0;padding:25px}
+  .home-method-steps h3{margin:33px 0 11px;font-size:25px}
+  .home-method-steps p{font-size:12px}
+  .home-empower-layout{grid-template-columns:1fr;gap:30px}
+  .home-empower-visual{min-height:405px;max-width:510px;width:100%;margin:0 auto}
+  .home-empower-photo{right:12px;bottom:15px}
+  .home-empower-photo-note{right:-2px;bottom:30px;padding:15px 18px;max-width:185px}
+  .home-empower-photo-note strong{font-size:17px}
+  .home-empower-text>p:not(.section-label){font-size:13px}
+  .home-empower-audiences{margin:25px 0}
+  .home-focus .section-head{margin-bottom:27px}
+  .home-focus-grid{grid-template-columns:1fr;gap:14px}
+  .home-focus-image{height:230px}
+  .home-focus-content{padding:22px 24px}
+  .home-focus-content h3{font-size:27px}
+  .home-focus-content p{min-height:0}
+  .home-impact{padding:78px 0}
+  .home-impact-layout{grid-template-columns:1fr;gap:33px}
+  .home-impact .section-heading{font-size:clamp(41px,8.5vw,55px)}
+  .home-impact-pillars{gap:10px}
+  .home-impact-pillars>div{min-height:152px;padding:19px}
+  .home-impact-pillars strong{font-size:13px}
+  .home-impact-pillars small{font-size:10px}
+  .home-collaborate-layout{grid-template-columns:1fr;gap:30px}
+  .home-collaborate-layout>div:first-child>p:not(.section-label){font-size:14px}
+  .home-collaborate-panel{min-height:310px;padding:32px 29px}
+  .home-collaborate-panel h3{font-size:30px;margin:27px 0 12px}
+  .home-questions{padding:75px 0 83px}
+  .home-questions-layout{grid-template-columns:1fr;gap:30px}
+  .home-questions-list summary{font-size:13px}
+}
+@media(max-width:420px){
+  .home-intro-imagery{min-height:330px}
+  .home-intro-photo{inset:0 14px 15px 10px}
+  .home-intro-image-label{width:147px;padding:12px;font-size:8px}
+  .home-empower-visual{min-height:340px}
+  .home-focus-image{height:200px}
+  .home-impact-pillars>div{padding:15px;min-height:150px}
+  .home-collaborate-actions{gap:9px}
+  .home-collaborate-actions .button{font-size:11px;padding:11px 16px}
+}
