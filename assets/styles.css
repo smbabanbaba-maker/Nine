@@ -717,3 +717,16 @@ body[data-page="impact"] .impact{min-height:580px}
   .brand-words{width:151px;height:35px;flex-basis:151px}
   .footer .brand-words{width:151px;height:35px;flex-basis:151px}
 }
+
+/* Display the EXACT uploaded NatureWorks JPEG — no redrawing, recoloring,
+   vector tracing, or recompression. Only its browser display size is controlled. */
+.site-header .brand-mark,
+.footer .brand-mark{
+  background-image:url("natureworks-original-exact.jpg");
+  background-repeat:no-repeat;
+  background-size:310% auto;
+  background-position:center 80%;
+  border-radius:50%;
+  overflow:hidden;
+  background-color:#fff;
+}
