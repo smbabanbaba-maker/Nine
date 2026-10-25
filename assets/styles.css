@@ -678,3 +678,42 @@ body[data-page="impact"] .impact{min-height:580px}
   .faq-standalone{padding-top:70px}
   body[data-page="contact"] .contact-section{min-height:0}
 }
+
+
+/* Authentic NatureWorks identity — traced directly from the official supplied artwork.
+   These assets are served locally from the GitHub repository, not from stock graphics. */
+.site-header .brand,.footer .brand{gap:9px}
+.brand-mark{
+  display:block;
+  width:48px;height:48px;min-width:48px;flex:0 0 48px;
+  background:url("natureworks-original-mark.svg") center center / contain no-repeat;
+}
+.brand-mark svg{visibility:hidden}
+.brand-words{
+  display:block;
+  width:185px;height:43px;min-width:0;flex:0 0 185px;
+  background:url("natureworks-original-wordmark.svg") left center / contain no-repeat;
+}
+.brand-words strong,.brand-words small{visibility:hidden}
+.footer .brand-footer{
+  background:#fff;
+  border-radius:999px;
+  width:max-content;
+  max-width:100%;
+  padding:7px 17px 7px 8px;
+  gap:8px;
+}
+@media(max-width:1200px){
+  .brand-mark{width:44px;height:44px;min-width:44px;flex-basis:44px}
+  .brand-words{width:170px;height:40px;flex-basis:170px}
+}
+@media(max-width:760px){
+  .site-header .brand{gap:7px}
+  .brand-mark{width:43px;height:43px;min-width:43px;flex-basis:43px}
+  .brand-words{width:167px;height:38px;flex-basis:167px}
+}
+@media(max-width:390px){
+  .brand-mark{width:39px;height:39px;min-width:39px;flex-basis:39px}
+  .brand-words{width:151px;height:35px;flex-basis:151px}
+  .footer .brand-words{width:151px;height:35px;flex-basis:151px}
+}
