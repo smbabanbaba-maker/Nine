@@ -133,6 +133,9 @@
     let currentHeroIndex=0;
     let heroTimer=null;
     const motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
+    let manuallyPaused=motionPreference.matches;
+    const heroPauseButton=document.getElementById('hero-motion-toggle');
+    const heroPauseLabel=heroPauseButton?heroPauseButton.querySelector('.hero-motion-label'):null;
     function showNextHeroSlide(){
       if(heroSlides.length<2)return;
       heroSlides[currentHeroIndex].classList.remove('is-active');
@@ -144,13 +147,28 @@
     }
     function syncHeroTimer(){
       stopHeroTimer();
-      if(!document.hidden&&!motionPreference.matches&&heroSlides.length>1){
+      if(!document.hidden&&!manuallyPaused&&heroSlides.length>1){
         heroTimer=window.setInterval(showNextHeroSlide,slideIntervalMs);
       }
+      if(heroPauseButton){
+        heroPauseButton.setAttribute('aria-pressed',String(manuallyPaused));
+        heroPauseButton.setAttribute('aria-label',manuallyPaused?'Play background slideshow':'Pause background slideshow');
+        if(heroPauseLabel)heroPauseLabel.textContent=manuallyPaused?'Play':'Pause';
+      }
+    }
+    if(heroPauseButton){
+      heroPauseButton.addEventListener('click',function(){
+        manuallyPaused=!manuallyPaused;
+        syncHeroTimer();
+      });
     }
     document.addEventListener('visibilitychange',syncHeroTimer);
-    if(motionPreference.addEventListener)motionPreference.addEventListener('change',syncHeroTimer);
-    else if(motionPreference.addListener)motionPreference.addListener(syncHeroTimer);
+    const onMotionPreferenceChange=function(){
+      if(motionPreference.matches)manuallyPaused=true;
+      syncHeroTimer();
+    };
+    if(motionPreference.addEventListener)motionPreference.addEventListener('change',onMotionPreferenceChange);
+    else if(motionPreference.addListener)motionPreference.addListener(onMotionPreferenceChange);
     syncHeroTimer();
   }
 

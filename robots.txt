@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nine-rouge-mu.vercel.app/sitemap.xml
