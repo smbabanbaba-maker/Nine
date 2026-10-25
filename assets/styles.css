@@ -569,3 +569,39 @@ img{display:block;max-width:100%}
   .hero-quick-arrow{right:7px;bottom:7px}
   .home-hero-foot{font-size:6.5px;padding-top:8px}
 }
+
+
+/* Photo storytelling slideshow — images stay behind the fixed hero content. */
+.hero-photo-bg.hero-slideshow{
+  overflow:hidden;
+  background-image:url('natureworks-hero.webp');
+  background-position:center;
+  filter:none;
+  transform:none;
+}
+.hero-slideshow .hero-slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  opacity:0;
+  transform:scale(1.04);
+  transition:opacity .95s ease-in-out,transform 3.9s ease-out;
+  pointer-events:none;
+  will-change:opacity;
+}
+.hero-slideshow .hero-slide.is-active{
+  opacity:1;
+  transform:scale(1);
+}
+@media(max-width:760px){
+  .hero-slideshow .hero-slide{background-position:50% center}
+  .hero-slideshow .hero-slide:nth-child(2){background-position:48% center}
+  .hero-slideshow .hero-slide:nth-child(4){background-position:51% 40%}
+  .hero-slideshow .hero-slide:nth-child(5){background-position:50% 45%}
+  .hero-slideshow .hero-slide:nth-child(6){background-position:50% 35%}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-slideshow .hero-slide{transition:none;transform:none}
+}

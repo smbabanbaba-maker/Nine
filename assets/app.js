@@ -123,6 +123,37 @@
       }catch(err){setStatus('Could not copy automatically. Try the email draft button instead.',true)}
     });
   }
+
+  // Nine NatureWorks photo stories: automatic crossfade every three seconds.
+  // Hero text and CTAs are independent from these background-only layers.
+  const heroSlideshow = document.getElementById('hero-slideshow');
+  if(heroSlideshow){
+    const heroSlides = Array.from(heroSlideshow.querySelectorAll('.hero-slide'));
+    const slideIntervalMs = 3000;
+    let currentHeroIndex=0;
+    let heroTimer=null;
+    const motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
+    function showNextHeroSlide(){
+      if(heroSlides.length<2)return;
+      heroSlides[currentHeroIndex].classList.remove('is-active');
+      currentHeroIndex=(currentHeroIndex+1)%heroSlides.length;
+      heroSlides[currentHeroIndex].classList.add('is-active');
+    }
+    function stopHeroTimer(){
+      if(heroTimer!==null){window.clearInterval(heroTimer);heroTimer=null}
+    }
+    function syncHeroTimer(){
+      stopHeroTimer();
+      if(!document.hidden&&!motionPreference.matches&&heroSlides.length>1){
+        heroTimer=window.setInterval(showNextHeroSlide,slideIntervalMs);
+      }
+    }
+    document.addEventListener('visibilitychange',syncHeroTimer);
+    if(motionPreference.addEventListener)motionPreference.addEventListener('change',syncHeroTimer);
+    else if(motionPreference.addListener)motionPreference.addListener(syncHeroTimer);
+    syncHeroTimer();
+  }
+
   const year=document.getElementById('year');
   if(year)year.textContent=String(new Date().getFullYear());
 })();
